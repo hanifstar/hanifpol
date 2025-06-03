@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Hanif Awol </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+    .news-grid img {
+    width: auto;           /* Let width adjust */
+    max-width: 100%;       /* Prevent overflow horizontally */
+    height: 350px;         /* Smaller fixed height */
+    object-fit: contain;   /* Show full image */
+    display: block;
+    margin: 0 auto;        /* Center if container is wider */
+}
+
+
+</style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Hanif Awol Seid</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="news.html" class="nav-link active">News</a>
+               
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- News Section -->
+    <section class="news-section">
+        <div class="container">
+            <h1>Latest News & Updates</h1>
+            <p class="section-subtitle">Stay updated with my latest projects and achievements</p>
+            
+            <div id="newsContainer" class="news-grid">
+                <!-- News posts will be loaded here dynamically -->
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading news...</p>
+                </div>
+            </div>
+            
+            <div id="noNews" class="no-news" style="display: none;">
+                <i class="fas fa-newspaper"></i>
+                <h3>No News Yet</h3>
+                <p>Check back later for updates and announcements.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Hanif Awol Seid. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/news.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Hanif Awol Seid</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Hanif Awol</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="news.html" class="nav-link">News</a>
+                <a href="admin.html" class="nav-link active">Admin</a>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Admin Section -->
+    <section class="admin-section">
+        <div class="container">
+            <h1>Admin Panel</h1>
+            <p class="section-subtitle">Manage news posts and website content</p>
+            
+            <div class="admin-content">
+                <div class="admin-form-container">
+                    <h2>Add New Post</h2>
+                    <form id="newsForm" class="admin-form" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="title">Post Title</label>
+                            <input type="text" id="title" name="title" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea id="description" name="description" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="image">Featured Image</label>
+                            <input type="file" id="image" name="image" accept="image/*" required>
+                            <div id="imagePreview" class="image-preview" style="display: none;">
+                                <img id="previewImg" src="/placeholder.svg" alt="Preview">
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-text">Publish Post</span>
+                            <span class="btn-loading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Publishing...
+                            </span>
+                        </button>
+                    </form>
+                    
+                    <div id="formMessage" class="form-message" style="display: none;"></div>
+                </div>
+                
+                <div class="admin-posts">
+                    <h2>Recent Posts</h2>
+                    <div id="adminPostsList" class="admin-posts-list">
+                        <div class="loading">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <p>Loading posts...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Hanif Awol Seid. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
